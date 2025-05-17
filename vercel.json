@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "buildCommand": "cd client && npm install && npm run build",
+  "buildCommand": "npm run vercel-build",
   "outputDirectory": "client/build",
   "builds": [
     {
@@ -14,8 +14,11 @@
       "dest": "server/index.js"
     },
     {
+      "handle": "filesystem"
+    },
+    {
       "src": "/(.*)",
-      "dest": "/client/build/$1"
+      "dest": "client/build/index.html"
     }
   ]
 } 
