@@ -1,7 +1,9 @@
 {
+  // Vercel deployment configuration
   "version": 2,
   "buildCommand": "npm run vercel-build",
   "outputDirectory": "client/build",
+  "cleanUrls": true,
   "builds": [
     {
       "src": "server/index.js",
